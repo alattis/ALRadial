@@ -19,6 +19,7 @@ ARC is used in the control, the example project requires ARC and autolayout
 Author
 ------
 http://github.com/alattis
+
 http://andrewlattis.com
 
 License (MIT)
