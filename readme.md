@@ -4,8 +4,11 @@ ALRadial is meant to replicate the radial menu's found in the path ios app. a ce
 
 the effect looks best with round icons.
 
-social icons from the veo design somacro set
+social icons from the veo design somacro set:
 http://veodesign.com/2011/en/11/08/somacro-27-free-big-and-simple-social-media-icons/
+
+video of the control:
+http://www.youtube.com/watch?v=9uszKz4Ct8U
 
 Use
 ---
