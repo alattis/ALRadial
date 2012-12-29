@@ -52,6 +52,15 @@
  */
 - (void) radialMenu:(ALRadialMenu *)radialMenu didSelectItemAtIndex:(NSInteger) index;
 
+@optional
+
+/**
+ * when called with this message delegate's should return the start of the arc.
+ * @return start of the arc
+ * @param radialMenu the radial menu object making the request
+ */
+- (NSInteger) arcStartForRadialMenu:(ALRadialMenu *)radialMenu;
+
 @end
 
 
