@@ -40,6 +40,11 @@
 		NSLog(@"default radius");
 		radius = 80;
 	}
+
+  int start = 0;
+  if ([self.delegate respondsToSelector:@selector(arcStartForRadialMenu:)]) {
+      start = [self.delegate arcStartForRadialMenu:self];
+  }
 	
 	
 	
@@ -51,7 +56,7 @@
 	int currentItem = 1;
 	ALRadialButton *popupButton;
 	while (currentItem <= itemCount) {
-		float radians = (angle * (currentItem - 1) + angle/2) * (M_PI/180);
+		float radians = (angle * (currentItem - 1) + start) * (M_PI/180);
 		
 		int x = round (centerX + radius * cos(radians));
 		int y = round (centerY + radius * sin(radians));
