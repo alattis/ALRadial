@@ -40,11 +40,11 @@
 		NSLog(@"default radius");
 		radius = 80;
 	}
-
-  int start = 0;
-  if ([self.delegate respondsToSelector:@selector(arcStartForRadialMenu:)]) {
-      start = [self.delegate arcStartForRadialMenu:self];
-  }
+	
+	int start = 0;
+	if ([self.delegate respondsToSelector:@selector(arcStartForRadialMenu:)]) {
+		start = [self.delegate arcStartForRadialMenu:self];
+	}
 	
 	
 	
@@ -64,13 +64,8 @@
 		int extraX = round (centerX + (radius*1.07) * cos(radians));
 		int extraY = round (centerY + (radius*1.07) * sin(radians));
 		
-		
-		CGRect frame = button.frame;
 		//FIXME: make height/width ivars with a delegate to resize
-		frame.size.height = 25;
-		frame.size.width = 25;
-		frame.origin.x = centerX;
-		frame.origin.y = centerY;
+		CGRect frame = CGRectMake(centerX, centerY, 25, 25);
 		
 		CGPoint final = CGPointMake(x, y);
 		CGPoint bounce = CGPointMake(extraX, extraY);
@@ -144,6 +139,11 @@
 
 
 - (void)buttonsWillAnimateFromButton:(id)sender inView:(UIView *)view {
+	if (self.animationTimer != nil) {
+		//an animation is already occuring, just exit, this happens when someone presses the button multiple times
+		return;
+	}
+	
 	if ([self.items count]) {
 		//the items are displayed already, hide them
 		[self itemsWillDisapearIntoButton:sender];
