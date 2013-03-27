@@ -61,6 +61,14 @@
  */
 - (NSInteger) arcStartForRadialMenu:(ALRadialMenu *)radialMenu;
 
+
+/**
+ * when called with this message delegate's should return the size of the button.
+ * @return size of the button
+ * @param radialMenu the radial menu object making the request
+ */
+- (float) buttonSizeForRadialMenu:(ALRadialMenu *)radialMenu;
+
 @end
 
 

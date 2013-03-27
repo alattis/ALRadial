@@ -47,11 +47,15 @@
 	}
 	
 	
-	
-	float angle = arc/itemCount;
+	float angle = (arc>=360)?(360/itemCount):((itemCount>1)?(arc/(itemCount-1)):0.0f);
 	int centerX = button.center.x;
 	int centerY = button.center.y;
 	CGPoint origin = CGPointMake(centerX, centerY);
+	
+	float buttonSize = 25.0f;
+	if ([self.delegate respondsToSelector:@selector(buttonSizeForRadialMenu:)]) {
+		buttonSize = [self.delegate buttonSizeForRadialMenu:self];
+	}
 	
 	int currentItem = 1;
 	ALRadialButton *popupButton;
@@ -65,7 +69,7 @@
 		int extraY = round (centerY + (radius*1.07) * sin(radians));
 		
 		//FIXME: make height/width ivars with a delegate to resize
-		CGRect frame = CGRectMake(centerX, centerY, 25, 25);
+		CGRect frame = CGRectMake(centerX-buttonSize*0.5f, centerY-buttonSize*0.5f, buttonSize, buttonSize);
 		
 		CGPoint final = CGPointMake(x, y);
 		CGPoint bounce = CGPointMake(extraX, extraY);
