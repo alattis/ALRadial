@@ -85,8 +85,9 @@
  * method that flings the item's into view
  * @param button the UIButton the items should appear from
  * @param view the view the buttons will be added to
+ * @param frame the frame to for the calculations
  */
-- (void)itemsWillAppearFromButton:(UIButton *) button inView:(UIView *)view;
+- (void)itemsWillAppearFromButton:(UIButton *) button withFrame:(CGRect)frame inView:(UIView *)view;
 
 /** 
  * method that removes the item's from view
@@ -98,8 +99,9 @@
  * helper method to display or hide the buttons
  * @param sender the button that was pressed to initial the action, the child buttons appear behind this object and animate out
  * @param view the UIView the buttons will appear in
+ * @param frame the frame to for the calculations
  */
-- (void)buttonsWillAnimateFromButton:(id)sender inView:(UIView *)view;
+- (void)buttonsWillAnimateFromButton:(id)sender withFrame:(CGRect)frame inView:(UIView *)view;
 
 
 ///@name Properites

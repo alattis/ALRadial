@@ -40,9 +40,9 @@
 - (IBAction)buttonPressed:(id)sender {
 	//the button that brings the items into view was pressed
 	if (sender == self.button) {
-		[self.radialMenu buttonsWillAnimateFromButton:sender inView:self.view];
+		[self.radialMenu buttonsWillAnimateFromButton:sender withFrame:self.button.frame inView:self.view];
 	} else if (sender == self.socialButton) {
-		[self.socialMenu buttonsWillAnimateFromButton:sender inView:self.view];
+		[self.socialMenu buttonsWillAnimateFromButton:sender withFrame:self.socialButton.frame inView:self.view];
 	}
 }
 
