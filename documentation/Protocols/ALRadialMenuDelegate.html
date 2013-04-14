@@ -48,6 +48,10 @@
 	
 	<option value="//api/name/arcSizeForRadialMenu:">&nbsp;&nbsp;&nbsp;&nbsp;- arcSizeForRadialMenu:</option>
 	
+	<option value="//api/name/arcStartForRadialMenu:">&nbsp;&nbsp;&nbsp;&nbsp;- arcStartForRadialMenu:</option>
+	
+	<option value="//api/name/buttonSizeForRadialMenu:">&nbsp;&nbsp;&nbsp;&nbsp;- buttonSizeForRadialMenu:</option>
+	
 	<option value="//api/name/numberOfItemsInRadialMenu:">&nbsp;&nbsp;&nbsp;&nbsp;- numberOfItemsInRadialMenu:</option>
 	
 	<option value="//api/name/radialMenu:didSelectItemAtIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- radialMenu:didSelectItemAtIndex:</option>
@@ -85,6 +89,10 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/arcRadiusForRadialMenu:">arcRadiusForRadialMenu:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/arcSizeForRadialMenu:">arcSizeForRadialMenu:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/arcStartForRadialMenu:">arcStartForRadialMenu:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/buttonSizeForRadialMenu:">buttonSizeForRadialMenu:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numberOfItemsInRadialMenu:">numberOfItemsInRadialMenu:</a></span></li>
 	
@@ -180,6 +188,20 @@
 	</span>
 	
 	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/arcStartForRadialMenu:">&ndash;&nbsp;arcStartForRadialMenu:</a></code>
+		<span class="tooltip"><p>when called with this message delegate&rsquo;s should return the start of the arc.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/buttonSizeForRadialMenu:">&ndash;&nbsp;buttonSizeForRadialMenu:</a></code>
+		<span class="tooltip"><p>when called with this message delegate&rsquo;s should return the size of the button.</p></span>
+	</span>
+	
+	
 </li>
 						</ul>
 						
@@ -279,6 +301,108 @@
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>size of the arc</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ALRadialMenu.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/arcStartForRadialMenu:" title="arcStartForRadialMenu:"></a>
+	<h3 class="subsubtitle method-title">arcStartForRadialMenu:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>when called with this message delegate&rsquo;s should return the start of the arc.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSInteger)arcStartForRadialMenu:(ALRadialMenu *)<em>radialMenu</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>radialMenu</em></dt>
+			<dd><p>the radial menu object making the request</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>start of the arc</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ALRadialMenu.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/buttonSizeForRadialMenu:" title="buttonSizeForRadialMenu:"></a>
+	<h3 class="subsubtitle method-title">buttonSizeForRadialMenu:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>when called with this message delegate&rsquo;s should return the size of the button.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (float)buttonSizeForRadialMenu:(ALRadialMenu *)<em>radialMenu</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>radialMenu</em></dt>
+			<dd><p>the radial menu object making the request</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>size of the button</p>
 	</div>
 	
 	
@@ -470,7 +594,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 andrew lattis. All rights reserved. (Last updated: 2012-12-19)</span><br />
+						<p><span class="copyright">&copy; 2013 andrew lattis. All rights reserved. (Last updated: 2013-04-14)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						

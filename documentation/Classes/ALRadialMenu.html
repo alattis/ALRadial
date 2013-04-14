@@ -57,9 +57,9 @@
 	
 	<option value="//api/name/buttonPressed:">&nbsp;&nbsp;&nbsp;&nbsp;- buttonPressed:</option>
 	
-	<option value="//api/name/buttonsWillAnimateFromButton:inView:">&nbsp;&nbsp;&nbsp;&nbsp;- buttonsWillAnimateFromButton:inView:</option>
+	<option value="//api/name/buttonsWillAnimateFromButton:withFrame:inView:">&nbsp;&nbsp;&nbsp;&nbsp;- buttonsWillAnimateFromButton:withFrame:inView:</option>
 	
-	<option value="//api/name/itemsWillAppearFromButton:inView:">&nbsp;&nbsp;&nbsp;&nbsp;- itemsWillAppearFromButton:inView:</option>
+	<option value="//api/name/itemsWillAppearFromButton:withFrame:inView:">&nbsp;&nbsp;&nbsp;&nbsp;- itemsWillAppearFromButton:withFrame:inView:</option>
 	
 	<option value="//api/name/itemsWillDisapearIntoButton:">&nbsp;&nbsp;&nbsp;&nbsp;- itemsWillDisapearIntoButton:</option>
 	
@@ -117,9 +117,9 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/buttonPressed:">buttonPressed:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/buttonsWillAnimateFromButton:inView:">buttonsWillAnimateFromButton:inView:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/buttonsWillAnimateFromButton:withFrame:inView:">buttonsWillAnimateFromButton:withFrame:inView:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/itemsWillAppearFromButton:inView:">itemsWillAppearFromButton:inView:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/itemsWillAppearFromButton:withFrame:inView:">itemsWillAppearFromButton:withFrame:inView:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/itemsWillDisapearIntoButton:">itemsWillDisapearIntoButton:</a></span></li>
 	
@@ -189,7 +189,7 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/itemsWillAppearFromButton:inView:">&ndash;&nbsp;itemsWillAppearFromButton:inView:</a></code>
+		<code><a href="#//api/name/itemsWillAppearFromButton:withFrame:inView:">&ndash;&nbsp;itemsWillAppearFromButton:withFrame:inView:</a></code>
 		<span class="tooltip"><p>method that flings the item&rsquo;s into view</p></span>
 	</span>
 	
@@ -203,7 +203,7 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/buttonsWillAnimateFromButton:inView:">&ndash;&nbsp;buttonsWillAnimateFromButton:inView:</a></code>
+		<code><a href="#//api/name/buttonsWillAnimateFromButton:withFrame:inView:">&ndash;&nbsp;buttonsWillAnimateFromButton:withFrame:inView:</a></code>
 		<span class="tooltip"><p>helper method to display or hide the buttons</p></span>
 	</span>
 	
@@ -494,8 +494,8 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/buttonsWillAnimateFromButton:inView:" title="buttonsWillAnimateFromButton:inView:"></a>
-	<h3 class="subsubtitle method-title">buttonsWillAnimateFromButton:inView:</h3>
+	<a name="//api/name/buttonsWillAnimateFromButton:withFrame:inView:" title="buttonsWillAnimateFromButton:withFrame:inView:"></a>
+	<h3 class="subsubtitle method-title">buttonsWillAnimateFromButton:withFrame:inView:</h3>
 	
 	
 	
@@ -505,7 +505,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)buttonsWillAnimateFromButton:(id)<em>sender</em> inView:(UIView *)<em>view</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)buttonsWillAnimateFromButton:(id)<em>sender</em> withFrame:(CGRect)<em>frame</em> inView:(UIView *)<em>view</em></code></div>
 
     
 	
@@ -515,6 +515,11 @@
 		<dl class="argument-def parameter-def">
 			<dt><em>sender</em></dt>
 			<dd><p>the button that was pressed to initial the action, the child buttons appear behind this object and animate out</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>frame</em></dt>
+			<dd><p>the frame to for the calculations</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -545,8 +550,8 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/itemsWillAppearFromButton:inView:" title="itemsWillAppearFromButton:inView:"></a>
-	<h3 class="subsubtitle method-title">itemsWillAppearFromButton:inView:</h3>
+	<a name="//api/name/itemsWillAppearFromButton:withFrame:inView:" title="itemsWillAppearFromButton:withFrame:inView:"></a>
+	<h3 class="subsubtitle method-title">itemsWillAppearFromButton:withFrame:inView:</h3>
 	
 	
 	
@@ -556,7 +561,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)itemsWillAppearFromButton:(UIButton *)<em>button</em> inView:(UIView *)<em>view</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)itemsWillAppearFromButton:(UIButton *)<em>button</em> withFrame:(CGRect)<em>frame</em> inView:(UIView *)<em>view</em></code></div>
 
     
 	
@@ -566,6 +571,11 @@
 		<dl class="argument-def parameter-def">
 			<dt><em>button</em></dt>
 			<dd><p>the UIButton the <a href="#//api/name/items">items</a> should appear from</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>frame</em></dt>
+			<dd><p>the frame to for the calculations</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -782,7 +792,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 andrew lattis. All rights reserved. (Last updated: 2012-12-19)</span><br />
+						<p><span class="copyright">&copy; 2013 andrew lattis. All rights reserved. (Last updated: 2013-04-14)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						
