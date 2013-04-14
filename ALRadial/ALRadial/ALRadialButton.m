@@ -46,7 +46,7 @@
 
 
 - (void)willDisappear {
-	[UIView animateWithDuration:.15f delay:0.0f options:UIViewAnimationCurveLinear animations:^{
+	[UIView animateWithDuration:.15f delay:0.0f options:UIViewAnimationOptionCurveLinear animations:^{
 		
 		//first do the rotate in place animation
 		[self.imageView setTransform:CGAffineTransformRotate(CGAffineTransformIdentity, -(180/180*M_PI))];
