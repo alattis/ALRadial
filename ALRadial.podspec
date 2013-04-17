@@ -10,8 +10,8 @@ Pod::Spec.new do |s|
   s.author       =  'Andrew Lattis'
   s.source       = { :git => "https://github.com/alattis/ALRadial.git", :tag => "v0.1.0" }
   s.platform     = :ios, '5.0'
-  s.source_files = 'ALRadial', 'ALRadial/**/*.{h,m}'
-  s.public_header_files = 'ALRadial/**/*.h'
+  s.source_files = 'ALRadial/ALRadial/ALRadial*.{h,m}'
+  s.public_header_files = 'ALRadial/ALRadial/ALRadial*.h'
   s.frameworks = 'QuartzCore', 'CoreGraphics'
   s.requires_arc = true
 end
