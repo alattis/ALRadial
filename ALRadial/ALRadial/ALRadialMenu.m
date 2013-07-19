@@ -230,7 +230,6 @@
 		//all the buttons are removed, kill the array that was retaining them
 		self.items = nil;
         [self.delegate itemsDidDisapearIntoMenu:self];
-
 	}
 }
 

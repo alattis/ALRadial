@@ -70,7 +70,7 @@
 - (float) buttonSizeForRadialMenu:(ALRadialMenu *)radialMenu;
 
 /**
- * when called with this message delegate's will be notified when the menu closes.
+ * when called with this message, delegate's will be notified when the menu closes.
  * @param radialMenu the radial menu object making the request
  */
 
