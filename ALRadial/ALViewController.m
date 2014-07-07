@@ -83,38 +83,43 @@
 }
 
 
-- (UIImage *) radialMenu:(ALRadialMenu *)radialMenu imageForIndex:(NSInteger) index {
-	if (radialMenu == self.radialMenu) {
+- (ALRadialButton *) radialMenu:(ALRadialMenu *)radialMenu buttonForIndex:(NSInteger)index {
+    ALRadialButton *button = [[ALRadialButton alloc] init];
+    if (radialMenu == self.radialMenu) {
 		if (index == 1) {
-			return [UIImage imageNamed:@"dribbble"];
+            [button setImage:[UIImage imageNamed:@"dribbble"] forState:UIControlStateNormal];
 		} else if (index == 2) {
-			return [UIImage imageNamed:@"youtube"];
+            [button setImage:[UIImage imageNamed:@"youtube"] forState:UIControlStateNormal];
 		} else if (index == 3) {
-			return [UIImage imageNamed:@"vimeo"];
+            [button setImage:[UIImage imageNamed:@"vimeo"] forState:UIControlStateNormal];
 		} else if (index == 4) {
-			return [UIImage imageNamed:@"pinterest"];
+            [button setImage:[UIImage imageNamed:@"pinterest"] forState:UIControlStateNormal];
 		} else if (index == 5) {
-			return [UIImage imageNamed:@"twitter"];
+            [button setImage:[UIImage imageNamed:@"twitter"] forState:UIControlStateNormal];
 		} else if (index == 6) {
-			return [UIImage imageNamed:@"instagram500"];
+            [button setImage:[UIImage imageNamed:@"instagram500"] forState:UIControlStateNormal];
 		} else if (index == 7) {
-			return [UIImage imageNamed:@"email"];
+            [button setImage:[UIImage imageNamed:@"email"] forState:UIControlStateNormal];
 		} else if (index == 8) {
-			return [UIImage imageNamed:@"googleplus-revised"];
+            [button setImage:[UIImage imageNamed:@"googleplus-revised"] forState:UIControlStateNormal];
 		} else if (index == 9) {
-			return [UIImage imageNamed:@"facebook500"];
+            [button setImage:[UIImage imageNamed:@"facebook500"] forState:UIControlStateNormal];
 		}
 
 	} else if (radialMenu == self.socialMenu) {
 		if (index == 1) {
-			return [UIImage imageNamed:@"email"];
+            [button setImage:[UIImage imageNamed:@"email"] forState:UIControlStateNormal];
 		} else if (index == 2) {
-			return [UIImage imageNamed:@"googleplus-revised"];
+            [button setImage:[UIImage imageNamed:@"googleplus-revised"] forState:UIControlStateNormal];
 		} else if (index == 3) {
-			return [UIImage imageNamed:@"facebook500"];
+            [button setImage:[UIImage imageNamed:@"facebook500"] forState:UIControlStateNormal];
 		}
 	}
 	
+    if (button.imageView.image) {
+        return button;
+    }
+    
 	return nil;
 }
 
