@@ -19,6 +19,11 @@
 		//the items are already displayed, we shouldn't be here
 		return;
 	}
+    
+	if (self.animationTimer != nil) {
+		//an animation is already occuring, just exit, this happens when someone presses the button multiple times
+		return;
+	}
 
 	NSInteger itemCount = [self.delegate numberOfItemsInRadialMenu:self];
 	if (itemCount == 0) {
@@ -74,16 +79,12 @@
 		CGPoint final = CGPointMake(x, y);
 		CGPoint bounce = CGPointMake(extraX, extraY);
 		
-		
-		popupButton = [[ALRadialButton alloc] initWithFrame:frame];
-		popupButton.alpha = 0.0f;
+		popupButton = [self.delegate radialMenu:self buttonForIndex:currentItem];
+		[popupButton setFrame:frame];
 		popupButton.centerPoint = final;
 		popupButton.bouncePoint = bounce;
 		popupButton.originPoint = origin;
 		
-		
-		//get the image from the deletate and set it on the button
-		[popupButton setImage:[self.delegate radialMenu:self imageForIndex:currentItem] forState:UIControlStateNormal];
 		//set the button tag, delegate, and target action
 		popupButton.tag = currentItem;
 		popupButton.delegate = self;
@@ -125,6 +126,12 @@
 		return;
 	}
 
+    if (self.animationTimer != nil) {
+		//items should be invalidated and animated back to their positions
+		[self.animationTimer invalidate];
+		self.animationTimer = nil;
+        self.itemIndex = [self.items count];
+	}
 	
 	//calculate the item fling interval based on the number of items
 	//never go on for more than half a second
@@ -201,7 +208,6 @@
 }
 
 
-
 - (void)shouldRotateButton:(UIButton *)button forDuration:(float)duration forwardDirection:(BOOL)direction {
 	//use CABasicAnimation instead of a view animation so we can keep the spin going for more than 360
 	CABasicAnimation *spinAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
@@ -216,9 +222,6 @@
 	[button.layer addAnimation:spinAnimation forKey:@"spinAnimation"];
 
 }
-
-
-
 
 
 #pragma mark - button delegate methods

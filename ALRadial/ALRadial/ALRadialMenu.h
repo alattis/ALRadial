@@ -38,12 +38,12 @@
 
 
 /** 
- * delegate's should return the image to be displayed at the the given index
- * @return image to be displayed
+ * delegate's should return the button to be displayed at the the given index
+ * @return button to be displayed
  * @param radialMenu the radial menu object making the request
  * @param index the item to be displayed
  */
-- (UIImage *) radialMenu:(ALRadialMenu *)radialMenu imageForIndex:(NSInteger) index;
+- (ALRadialButton *) radialMenu:(ALRadialMenu *)radialMenu buttonForIndex:(NSInteger) index;
 
 /**
  * this method will notify the delegates any time a button from the radial menu is pressed
