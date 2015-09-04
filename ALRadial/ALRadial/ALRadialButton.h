@@ -46,6 +46,9 @@
 ///the center point of the button's starting point, and ending point when it disappears
 @property (nonatomic) CGPoint originPoint;
 
+//flag which enables fade-in and fade-out of the button during animation
+@property (nonatomic, assign) BOOL shouldFade;
+
 ///the delegate object for the creator of this button
 @property (nonatomic, weak) id <ALRadialButtonDelegate> delegate;
 
