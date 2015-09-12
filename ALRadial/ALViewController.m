@@ -27,6 +27,7 @@
 	
 	self.socialMenu = [[ALRadialMenu alloc] init];
 	self.socialMenu.delegate = self;
+    self.socialMenu.fadeItems = YES;
 }
 
 

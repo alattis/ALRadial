@@ -117,6 +117,9 @@
 
 ///array storing the buttons to be displayed
 @property (nonatomic, strong) NSMutableArray *items;
+
+//flag which enables fade-in and fade-out of the items during animation
+@property (nonatomic, assign) BOOL fadeItems;
 @end
 
 
