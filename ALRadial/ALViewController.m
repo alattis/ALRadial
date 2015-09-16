@@ -141,4 +141,8 @@
 
 }
 
+-(void) itemsDidDisapearIntoMenu:(ALRadialMenu *)radialMenu {
+    NSLog(@"Menu closed");
+}
+
 @end
