@@ -210,6 +210,18 @@
 
 
 - (void)shouldRotateButton:(UIButton *)button forDuration:(float)duration forwardDirection:(BOOL)direction {
+    BOOL shouldRotate = YES;
+    
+    if (direction && [self.delegate respondsToSelector:@selector(radialMenu:shouldRotateMenuButtonWhenItemsAppear:)]) {
+        shouldRotate = [self.delegate radialMenu:self shouldRotateMenuButtonWhenItemsAppear:button];
+    } else if (!direction && [self.delegate respondsToSelector:@selector(radialMenu:shouldRotateMenuButtonWhenItemsDisappear:)]) {
+        shouldRotate = [self.delegate radialMenu:self shouldRotateMenuButtonWhenItemsDisappear:button];
+    }
+    
+    if (!shouldRotate) {
+        return;
+    }
+    
 	//use CABasicAnimation instead of a view animation so we can keep the spin going for more than 360
 	CABasicAnimation *spinAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
 	spinAnimation.duration = duration;
