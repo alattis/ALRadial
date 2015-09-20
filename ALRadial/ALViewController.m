@@ -141,4 +141,20 @@
 
 }
 
+- (BOOL)radialMenu:(ALRadialMenu *)radialMenu shouldRotateMenuButtonWhenItemsAppear:(UIButton *)button {
+    if (radialMenu == self.radialMenu) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (BOOL)radialMenu:(ALRadialMenu *)radialMenu shouldRotateMenuButtonWhenItemsDisappear:(UIButton *)button {
+    if (radialMenu == self.radialMenu) {
+        return NO;
+    }
+    
+    return YES;
+}
+
 @end
