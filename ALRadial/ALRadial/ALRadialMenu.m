@@ -85,6 +85,10 @@
 		popupButton.bouncePoint = bounce;
 		popupButton.originPoint = origin;
         popupButton.shouldFade = self.fadeItems;
+        
+        if (popupButton.shouldFade) {
+            popupButton.alpha = 0.0;
+        }
 		
 		//set the button tag, delegate, and target action
 		popupButton.tag = currentItem;
